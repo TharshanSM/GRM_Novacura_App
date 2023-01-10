@@ -1,23 +1,18 @@
-const express = require('express')
-require('dotenv').config()
-const app = express()
-const port = 3000
+const express = require("express");
+const bodyParser = require("body-parser");
+require("dotenv").config();
+const app = express();
 
-const allocationRoutes = require('./routes/allocation');
+const allocationRoutes = require("./routes/allocation");
 
-app.use('/allocations',allocationRoutes);
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use("/allocations", allocationRoutes);
 
+app.get("/", (req, res) => {
+    res.send("Global Resource Management App");
+});
 
-
-app.get('/', (req, res) => {
-  res.send('Global Resource Management App Backend Configuration');
-})
-
-
-
-app.listen(process.env.PORT, () => {
-  console.log('App is Listening')
-})
-
-
-
+app.listen(process.env.PORT || 3000, () => {
+    console.log("App is Listening");
+});
