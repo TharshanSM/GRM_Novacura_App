@@ -14,6 +14,24 @@ router.get("/employees", async (req, res) => {
     }
 });
 
+router.post("/employees/add", async (req, res) => {
+    const { firstName, lastName, joinDate, status, managerID } = req.body;
+    const query = `INSERT INTO [grm].[employees]([first_name],[last_name],[join_date],[status],[manager_id]) 
+                    VALUES ('${firstName}','${lastName}','${joinDate}','${status}','${managerID}')`;
+    try {
+        const pool = await sql.connect(dbconfig);
+        const result = await pool.request().query(query);
+        res.json({
+            message: "Employee Created Sucessfully",
+            result: result,
+        });
+    } catch (err) {
+        res.json({
+            err: err,
+        });
+    }
+});
+
 // Create Weekly Allocation Table
 router.post("/add", async (req, res) => {
     const { employeeID, projectID, roleID, weekID, allocation } = req.body;

@@ -492,7 +492,7 @@
                 <div class="collapse" id="collapseExample">
                     <div class="card card-body mt-3 pt-3">
                         <!-- General Form Elements -->
-                        <form action="" method="post">
+                        <form onsubmit="addEmployee(event)">
                             <div class="row mb-3">
                                 <label
                                     for="inputText"
@@ -504,6 +504,7 @@
                                         type="text"
                                         class="form-control"
                                         name="first_name"
+                                        id="first_name"
                                         required
                                     />
                                 </div>
@@ -519,6 +520,7 @@
                                         type="text"
                                         class="form-control"
                                         name="last_name"
+                                        id="last_name"
                                         required
                                     />
                                 </div>
@@ -534,6 +536,7 @@
                                         type="date"
                                         class="form-control"
                                         name="joined_date"
+                                        id="joined_date"
                                         required
                                     />
                                 </div>
@@ -549,6 +552,7 @@
                                         type="text"
                                         class="form-control"
                                         name="status"
+                                        id="status"
                                         required
                                     />
                                 </div>
@@ -564,6 +568,7 @@
                                         type="number"
                                         class="form-control"
                                         name="manger_id"
+                                        id="manager_id"
                                         required
                                     />
                                 </div>
@@ -618,23 +623,42 @@
                 });
         </script>
         <script>
-            const submitButton = document.getElementById("submitbutton");
-            submitButton.addEventListener("click", () => {
-                console.log("Clicked");
-                // const first_name = document.getElementById("first_name").value;
-                // const last_name = document.getElementById("last_name").value;
-                // const joined_date =
-                //     document.getElementById("joined_date").value;
-                // const status = document.getElementById("status").value;
-                // const manger_id = document.getElementById("manger_id").value;
-                // console.log(
-                //     first_name,
-                //     last_name,
-                //     joined_date,
-                //     status,
-                //     manger_id
-                // );
-            });
+            function addEmployee(event) {
+                event.preventDefault();
+                const first_name = document.getElementById("first_name").value;
+                const last_name = document.getElementById("last_name").value;
+                const joined_date =
+                    document.getElementById("joined_date").value;
+                const status = document.getElementById("status").value;
+                const manager_id = document.getElementById("manager_id").value;
+                console.log(
+                    first_name,
+                    last_name,
+                    joined_date,
+                    status,
+                    manager_id
+                );
+
+                fetch("http://localhost:3000/allocations/employees/add", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        firstName: first_name,
+                        lastName: last_name,
+                        joinDate: joined_date,
+                        status: status,
+                        managerID: manager_id,
+                    }),
+                })
+                    .then((response) => response.json())
+                    .then((data) => console.log(data))
+                    .catch((error) => console.error(error));
+
+                location.href =
+                    "http://127.0.0.1:5500/Frontend/pages-employees.html";
+            }
         </script>
 
         <!-- ======= Footer ======= -->
