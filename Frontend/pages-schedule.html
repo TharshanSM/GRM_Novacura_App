@@ -442,6 +442,7 @@
                 <!-- End Login Page Nav -->
             </ul>
         </aside>
+
         <!-- End Sidebar-->
         <main id="main" class="main">
             <div class="pagetitle">
@@ -458,84 +459,120 @@
             </div>
             <!-- End Page Title -->
 
-            <!--data entry form-->
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Enter Details</h5>
+            <!-- Add Allocation Form -->
+            <div>
+                <a
+                    class="btn btn-primary"
+                    data-bs-toggle="collapse"
+                    href="#collapseExample"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="collapseExample"
+                >
+                    <i class="bi bi-plus-circle"></i> Add
+                </a>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body mt-3 pt-3">
+                        <!-- General Form Elements -->
+                        <form>
+                            <div class="row mb-3">
+                                <label
+                                    for="inputText"
+                                    class="col-sm-2 col-form-label"
+                                    >Employee ID</label
+                                >
+                                <div class="col-sm-10">
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        name="emp_id"
+                                        id="emp_id"
+                                        required
+                                    />
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label
+                                    for="inputText"
+                                    class="col-sm-2 col-form-label"
+                                    >Project ID</label
+                                >
+                                <div class="col-sm-10">
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        name="project_id"
+                                        id="project_id"
+                                        required
+                                    />
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label
+                                    for="inputText"
+                                    class="col-sm-2 col-form-label"
+                                    >Role ID</label
+                                >
+                                <div class="col-sm-10">
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        name="role_id"
+                                        id="role_id"
+                                        required
+                                    />
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label
+                                    for="inputText"
+                                    class="col-sm-2 col-form-label"
+                                    >Week ID</label
+                                >
+                                <div class="col-sm-10">
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        name="week_id"
+                                        id="week_id"
+                                        required
+                                    />
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label
+                                    for="inputText"
+                                    class="col-sm-2 col-form-label"
+                                    >Allocation</label
+                                >
+                                <div class="col-sm-10">
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        name="allocation"
+                                        id="allocation"
+                                        required
+                                    />
+                                </div>
+                            </div>
 
-                    <!-- Vertical Form -->
-                    <form class="row g-3">
-                        <div class="col-12">
-                            <label for="inputID" class="form-label">ID</label>
-                            <input
-                                type="number"
-                                class="form-control"
-                                id="inputID"
-                            />
-                        </div>
-                        <div class="col-12">
-                            <label for="inputEmployeeID" class="form-label"
-                                >Employee ID</label
-                            >
-                            <input
-                                type="number"
-                                class="form-control"
-                                id="inputEmployeeID"
-                            />
-                        </div>
-                        <div class="col-12">
-                            <label for="inputProjectID" class="form-label"
-                                >Project ID</label
-                            >
-                            <input
-                                type="number"
-                                class="form-control"
-                                id="inputProjectID"
-                            />
-                        </div>
-                        <div class="col-12">
-                            <label for="inputRoleID" class="form-label"
-                                >Role ID</label
-                            >
-                            <input
-                                type="number"
-                                class="form-control"
-                                id="inputRoleID"
-                            />
-                        </div>
-                        <div class="col-12">
-                            <label for="inputWeekID" class="form-label"
-                                >Week ID</label
-                            >
-                            <input
-                                type="number"
-                                class="form-control"
-                                id="inputWeekID"
-                            />
-                        </div>
-                        <div class="col-12">
-                            <label for="inputAllocation" class="form-label"
-                                >Allocation</label
-                            >
-                            <input
-                                type="number"
-                                class="form-control"
-                                id="inputAllocation"
-                            />
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-primary">
-                                Submit
-                            </button>
-                            <button type="reset" class="btn btn-secondary">
-                                Reset
-                            </button>
-                        </div>
-                    </form>
-                    <!-- Vertical Form -->
+                            <div class="row mb-3">
+                                <span class="col-sm-2 col-form-label"> </span>
+                                <div class="col-sm-10">
+                                    <button
+                                        type="submit"
+                                        class="btn btn-primary"
+                                        id="submitbutton"
+                                    >
+                                        Submit
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- End General Form Elements -->
+                    </div>
                 </div>
             </div>
-            <!--data entry form-->
         </main>
         <!-- End #main -->
 
