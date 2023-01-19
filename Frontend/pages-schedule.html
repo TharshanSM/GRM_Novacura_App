@@ -457,7 +457,25 @@
                     </ol>
                 </nav>
             </div>
-            <!-- End Page Title -->
+
+            <!-- Schedule -->
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Allocation Details</h5>
+                    <table class="table table-hover" id="scheduletable">
+                        <thead>
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Project</th>
+                                <th scope="col">Role Assignemt</th>
+                                <th scope="col">Week</th>
+                                <th scope="col">Allocation</th>
+                            </tr>
+                        </thead>
+                        <tbody id="schedule"></tbody>
+                    </table>
+                </div>
+            </div>
 
             <!-- Add Allocation Form -->
             <div>
@@ -590,6 +608,40 @@
             class="back-to-top d-flex align-items-center justify-content-center"
             ><i class="bi bi-arrow-up-short"></i
         ></a>
+
+        <script>
+            fetch("http://localhost:3000/allocations/get/")
+                .then((response) => response.json())
+                .then((data) => {
+                    $(document).ready(function () {
+                        $("#scheduletable").DataTable({
+                            select: true,
+                        });
+                    });
+                    let tableBody = document.getElementById("schedule");
+                    let i = data.recordsets[0];
+                    i.forEach((element) => {
+                        let row = document.createElement("tr");
+                        let col1 = document.createElement("td");
+                        col1.innerHTML =
+                            element.first_name + " " + element.last_name;
+                        let col2 = document.createElement("td");
+                        col2.innerHTML = element.project_name;
+                        let col3 = document.createElement("td");
+                        col3.innerHTML = element.role_assignment;
+                        let col4 = document.createElement("td");
+                        col4.innerHTML = element.week_number;
+                        let col5 = document.createElement("td");
+                        col5.innerHTML = element.allocation;
+                        row.appendChild(col1);
+                        row.appendChild(col2);
+                        row.appendChild(col3);
+                        row.appendChild(col4);
+                        row.appendChild(col5);
+                        tableBody.appendChild(row);
+                    });
+                });
+        </script>
 
         <!-- Vendor JS Files -->
         <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>

@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const colors = require("colors");
 require("dotenv").config();
 const cors = require("cors");
 const app = express();
@@ -16,5 +17,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(process.env.PORT || 3000, () => {
-    console.log("App is Listening");
+    console.log(colors.cyan.underline("App is Listening"));
 });
