@@ -11,6 +11,14 @@
         <!-- JQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+        <!-- Grid JS -->
+        <script src="https://unpkg.com/gridjs-jquery/dist/gridjs.production.min.js"></script>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
+        />
+
         <!-- Data Table -->
         <link
             rel="stylesheet"
@@ -463,6 +471,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Employee Details</h5>
 
+                    <div id="wrapper"></div>
                     <!-- Table with hoverable rows -->
                     <table class="table table-hover" id="emptable">
                         <thead>
@@ -647,47 +656,46 @@
         </script>
 
         <script>
-                function addEmployee(event) {
-                    event.preventDefault();
-                    const first_name = document.getElementById("first_name").value;
-                    const last_name = document.getElementById("last_name").value;
-                    const joined_date =
-                        document.getElementById("joined_date").value;
-                    const status = document.getElementById("status").value;
-                    const manager_id = document.getElementById("manager_id").value;
-                    console.log(
-                        first_name,
-                        last_name,
-                        joined_date,
-                        status,
-                        manager_id
-                    );
+            function addEmployee(event) {
+                event.preventDefault();
+                const first_name = document.getElementById("first_name").value;
+                const last_name = document.getElementById("last_name").value;
+                const joined_date =
+                    document.getElementById("joined_date").value;
+                const status = document.getElementById("status").value;
+                const manager_id = document.getElementById("manager_id").value;
+                console.log(
+                    first_name,
+                    last_name,
+                    joined_date,
+                    status,
+                    manager_id
+                );
 
-                    fetch("http://localhost:3000/allocations/employees/add", {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json",
-                        },
-                        body: JSON.stringify({
-                            firstName: first_name,
-                            lastName: last_name,
-                            joinDate: joined_date,
-                            status: status,
-                            managerID: manager_id,
-                        }),
-                    })
-                        .then((response) => response.json())
-                        .then((data) => console.log(data))
-                        .catch((error) => console.error(error));
+                fetch("http://localhost:3000/allocations/employees/add", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        firstName: first_name,
+                        lastName: last_name,
+                        joinDate: joined_date,
+                        status: status,
+                        managerID: manager_id,
+                    }),
+                })
+                    .then((response) => response.json())
+                    .then((data) => console.log(data))
+                    .catch((error) => console.error(error));
 
-                    location.href =
-                        "http://127.0.0.1:5500/Frontend/pages-employees.html";
-                }
-            </script
-
-            <!-- Vendor JS Files -->
-            <script src="assets/vendor/apexcharts/apexcharts.min.js">
+                location.href =
+                    "http://127.0.0.1:5500/Frontend/pages-employees.html";
+            }
         </script>
+
+        <!-- Vendor JS Files -->
+        <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
         <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="assets/vendor/chart.js/chart.umd.js"></script>
         <script src="assets/vendor/echarts/echarts.min.js"></script>
