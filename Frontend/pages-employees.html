@@ -594,6 +594,22 @@
             </div>
         </main>
         <!-- End #main -->
+
+        <!-- ======= Footer ======= -->
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                &copy; Copyright <strong><span>GRM</span></strong
+                >.
+            </div>
+        </footer>
+        <!-- End Footer -->
+
+        <a
+            href="#"
+            class="back-to-top d-flex align-items-center justify-content-center"
+            ><i class="bi bi-arrow-up-short"></i
+        ></a>
+
         <script>
             fetch("http://localhost:3000/allocations/employees/")
                 .then((response) => response.json())
@@ -629,63 +645,49 @@
                     });
                 });
         </script>
-        <script></script>
+
         <script>
-            function addEmployee(event) {
-                event.preventDefault();
-                const first_name = document.getElementById("first_name").value;
-                const last_name = document.getElementById("last_name").value;
-                const joined_date =
-                    document.getElementById("joined_date").value;
-                const status = document.getElementById("status").value;
-                const manager_id = document.getElementById("manager_id").value;
-                console.log(
-                    first_name,
-                    last_name,
-                    joined_date,
-                    status,
-                    manager_id
-                );
+                function addEmployee(event) {
+                    event.preventDefault();
+                    const first_name = document.getElementById("first_name").value;
+                    const last_name = document.getElementById("last_name").value;
+                    const joined_date =
+                        document.getElementById("joined_date").value;
+                    const status = document.getElementById("status").value;
+                    const manager_id = document.getElementById("manager_id").value;
+                    console.log(
+                        first_name,
+                        last_name,
+                        joined_date,
+                        status,
+                        manager_id
+                    );
 
-                fetch("http://localhost:3000/allocations/employees/add", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        firstName: first_name,
-                        lastName: last_name,
-                        joinDate: joined_date,
-                        status: status,
-                        managerID: manager_id,
-                    }),
-                })
-                    .then((response) => response.json())
-                    .then((data) => console.log(data))
-                    .catch((error) => console.error(error));
+                    fetch("http://localhost:3000/allocations/employees/add", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                            firstName: first_name,
+                            lastName: last_name,
+                            joinDate: joined_date,
+                            status: status,
+                            managerID: manager_id,
+                        }),
+                    })
+                        .then((response) => response.json())
+                        .then((data) => console.log(data))
+                        .catch((error) => console.error(error));
 
-                location.href =
-                    "http://127.0.0.1:5500/Frontend/pages-employees.html";
-            }
+                    location.href =
+                        "http://127.0.0.1:5500/Frontend/pages-employees.html";
+                }
+            </script
+
+            <!-- Vendor JS Files -->
+            <script src="assets/vendor/apexcharts/apexcharts.min.js">
         </script>
-
-        <!-- ======= Footer ======= -->
-        <footer id="footer" class="footer">
-            <div class="copyright">
-                &copy; Copyright <strong><span>GRM</span></strong
-                >.
-            </div>
-        </footer>
-        <!-- End Footer -->
-
-        <a
-            href="#"
-            class="back-to-top d-flex align-items-center justify-content-center"
-            ><i class="bi bi-arrow-up-short"></i
-        ></a>
-
-        <!-- Vendor JS Files -->
-        <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
         <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="assets/vendor/chart.js/chart.umd.js"></script>
         <script src="assets/vendor/echarts/echarts.min.js"></script>
