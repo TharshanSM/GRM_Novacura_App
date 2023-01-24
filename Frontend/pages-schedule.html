@@ -485,8 +485,7 @@
                 </div>
             </div> -->
 
-            <div id="container"></div>
-            <div id="wrapper"></div>
+            <div id="container" class="row"></div>
 
             <!-- Add Allocation Form -->
             <div>
@@ -632,6 +631,7 @@
 
             employees.forEach((employee) => {
                 $(document).ready(function () {
+                    var $col = $("<div>").addClass("col-sm-6");
                     var $card = $("<div>").addClass("card");
                     var $cardBody = $("<div>").addClass("card-body");
                     var $cardTitle = $("<h5>")
@@ -659,7 +659,8 @@
                     $table.append($thead, $tbody);
                     $cardBody.append($cardTitle, $table);
                     $card.append($cardBody);
-                    $("#container").append($card);
+                    $col.append($card);
+                    $("#container").append($col);
                 });
             });
         </script>
@@ -669,9 +670,6 @@
                 fetch("http://localhost:3000/allocations/get/")
                     .then((response) => response.json())
                     .then((data) => {
-                        // $(document).ready(function () {
-                        //     $(`#${emp.id}`).DataTable();
-                        // });
                         let tableBody = document.getElementById(`${emp.id}`);
                         let i = data.recordsets[0];
                         i.forEach((element) => {
@@ -682,6 +680,12 @@
                             let col4 = $("<td>").html(element.allocation);
                             row.append(col1, col2, col3, col4);
                             $(`#${emp.id}`).append(row);
+                        });
+                        $(`#${emp.id}`).Grid({
+                            pagination: true,
+                            search: true,
+                            sort: true,
+                            resizable: true,
                         });
                     });
             });

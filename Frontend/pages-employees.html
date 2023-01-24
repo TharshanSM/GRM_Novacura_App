@@ -647,10 +647,16 @@
                         row.appendChild(col6);
                         tableBody.appendChild(row);
                     });
-                    $(document).ready(function () {
-                        $("#emptable").DataTable({
-                            select: true,
-                        });
+                    // $(document).ready(function () {
+                    //     $("#emptable").DataTable({
+                    //         select: true,
+                    //     });
+                    // });
+                    $("#emptable").Grid({
+                        pagination: true,
+                        search: true,
+                        sort: true,
+                        resizable: true,
                     });
                 });
         </script>
