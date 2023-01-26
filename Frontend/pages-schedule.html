@@ -485,8 +485,6 @@
                 </div>
             </div> -->
 
-            <div id="container" class="row"></div>
-
             <!-- Add Allocation Form -->
             <div>
                 <a
@@ -497,7 +495,7 @@
                     aria-expanded="false"
                     aria-controls="collapseExample"
                 >
-                    <i class="bi bi-plus-circle"></i> Add
+                    <i class="bi bi-plus-circle"></i> Allocate
                 </a>
                 <div class="collapse" id="collapseExample">
                     <div class="card card-body mt-3 pt-3">
@@ -601,6 +599,10 @@
                     </div>
                 </div>
             </div>
+            <hr />
+
+            <!-- Table Container -->
+            <div id="container" class="row mt-3"></div>
         </main>
         <!-- End #main -->
 
@@ -631,7 +633,7 @@
 
             employees.forEach((employee) => {
                 $(document).ready(function () {
-                    var $col = $("<div>").addClass("col-sm-6");
+                    var $col = $("<div>").addClass("col-4");
                     var $card = $("<div>").addClass("card");
                     var $cardBody = $("<div>").addClass("card-body");
                     var $cardTitle = $("<h5>")
@@ -645,16 +647,13 @@
                     var $thProject = $("<th>")
                         .attr("scope", "col")
                         .text("Project");
-                    var $thRole = $("<th>")
-                        .attr("scope", "col")
-                        .text("Role Assignemt");
                     var $thWeek = $("<th>").attr("scope", "col").text("Week");
                     var $thAllocation = $("<th>")
                         .attr("scope", "col")
                         .text("Allocation");
                     var $tbody = $("<tbody>").attr("id", employee.id);
 
-                    $tr.append($thProject, $thRole, $thWeek, $thAllocation);
+                    $tr.append($thProject, $thWeek, $thAllocation);
                     $thead.append($tr);
                     $table.append($thead, $tbody);
                     $cardBody.append($cardTitle, $table);
@@ -675,10 +674,9 @@
                         i.forEach((element) => {
                             let row = $("<tr>");
                             let col1 = $("<td>").html(element.project_name);
-                            let col2 = $("<td>").html(element.role_assignment);
-                            let col3 = $("<td>").html(element.week_number);
-                            let col4 = $("<td>").html(element.allocation);
-                            row.append(col1, col2, col3, col4);
+                            let col2 = $("<td>").html(element.week_number);
+                            let col3 = $("<td>").html(element.allocation);
+                            row.append(col1, col2, col3);
                             $(`#${emp.id}`).append(row);
                         });
                         $(`#${emp.id}`).Grid({
