@@ -394,21 +394,21 @@
 
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="pages-schedule.html">
-                        <i class="bi bi-bar-chart-steps"></i>
+                        <i class="bi bi-book"></i>
                         <span>Schedule</span>
                     </a>
                 </li>
                 <!-- End Schedule Nav -->
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link collapsed" href="pages-projects.html">
                         <i class="bi bi-kanban"></i>
                         <span>Project</span>
                     </a>
-                </li>
+                </li> -->
                 <!--End Project Nav -->
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a
                         class="nav-link collapsed"
                         href="pages-project-manager.html"
@@ -416,37 +416,37 @@
                         <i class="bi bi-person-circle"></i>
                         <span>Project Managers</span>
                     </a>
-                </li>
+                </li> -->
                 <!--End Contact Page Nav -->
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link collapsed" href="pages-employees.html">
                         <i class="bi bi-people"></i>
                         <span>Employees</span>
                     </a>
-                </li>
+                </li> -->
                 <!-- End Bmployee Page Nav-->
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link collapsed" href="users-profile.html">
                         <i class="bi bi-person"></i>
                         <span>Profile</span>
                     </a>
-                </li>
+                </li> -->
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link collapsed" href="pages-register.html">
                         <i class="bi bi-card-list"></i>
                         <span>Register</span>
                     </a>
-                </li>
+                </li> -->
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link collapsed" href="pages-login.html">
                         <i class="bi bi-box-arrow-in-right"></i>
                         <span>Login</span>
                     </a>
-                </li>
+                </li> -->
                 <!-- End Login Page Nav -->
             </ul>
         </aside>
@@ -704,54 +704,7 @@
         <!-- Template Main JS File -->
         <script src="assets/js/main.js"></script>
 
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                new Chart(document.querySelector("#barChart"), {
-                    type: "bar",
-                    data: {
-                        labels: [
-                            "Week 01",
-                            "Week 02",
-                            "Week 03",
-                            "Week 04",
-                            "Week 05",
-                        ],
-                        datasets: [
-                            {
-                                label: "Allocation",
-                                data: [80, 90, 110],
-                                backgroundColor: [
-                                    "rgba(255, 99, 132, 0.2)",
-                                    "rgba(255, 159, 64, 0.2)",
-                                    "rgba(255, 205, 86, 0.2)",
-                                    "rgba(75, 192, 192, 0.2)",
-                                    "rgba(54, 162, 235, 0.2)",
-                                    "rgba(153, 102, 255, 0.2)",
-                                    "rgba(201, 203, 207, 0.2)",
-                                ],
-                                borderColor: [
-                                    "rgb(255, 99, 132)",
-                                    "rgb(255, 159, 64)",
-                                    "rgb(255, 205, 86)",
-                                    "rgb(75, 192, 192)",
-                                    "rgb(54, 162, 235)",
-                                    "rgb(153, 102, 255)",
-                                    "rgb(201, 203, 207)",
-                                ],
-                                borderWidth: 2,
-                            },
-                        ],
-                    },
-                    options: {
-                        scales: {
-                            y: {
-                                beginAtZero: true,
-                            },
-                        },
-                    },
-                });
-            });
-        </script>
+        <script></script>
 
         <script>
             document.addEventListener("DOMContentLoaded", () => {
@@ -773,6 +726,56 @@
                         ],
                     },
                 });
+            });
+        </script>
+
+        <script>
+            let ctx = document.getElementById("barChart").getContext("2d");
+            let myChart = new Chart(ctx, {
+                type: "bar",
+                data: {
+                    labels: [
+                        "Week 01",
+                        "Week 02",
+                        "Week 03",
+                        "Week 04",
+                        "Week 05",
+                    ],
+                    datasets: [
+                        {
+                            label: "Project 01",
+                            data: [20, 60, 20],
+                            backgroundColor: "rgba(255, 99, 132, 0.2)",
+                            borderColor: "rgba(255, 99, 132, 1)",
+                            borderWidth: 1,
+                        },
+                        {
+                            label: "Project 02",
+                            data: [40, 20, 40],
+                            backgroundColor: "rgba(54, 162, 235, 0.2)",
+                            borderColor: "rgba(54, 162, 235, 1)",
+                            borderWidth: 1,
+                        },
+                        {
+                            label: "Project 02",
+                            data: [40, 20, 40],
+                            backgroundColor: "rgba(255, 205, 86, 0.2)",
+                            borderColor: "rgba(255, 205, 86, 1)",
+                            borderWidth: 1,
+                        },
+                    ],
+                },
+                options: {
+                    scales: {
+                        x: {
+                            stacked: true,
+                        },
+                        y: {
+                            stacked: true,
+                            beginAtZero: true,
+                        },
+                    },
+                },
             });
         </script>
     </body>
