@@ -466,67 +466,129 @@
                 </nav>
             </div>
 
-            <section class="section">
-                <div
-                    id="carouselExampleInterval"
-                    class="carousel slide"
-                    data-bs-ride="carousel"
+            <div
+                id="carouselExampleInterval"
+                class="carousel slide mb-4"
+                data-bs-ride="carousel"
+            >
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="1000">
+                        <img
+                            src="assets/img/ab.png"
+                            class="d-block w-100"
+                            alt="..."
+                        />
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img
+                            src="assets/img/ac.png"
+                            class="d-block w-100"
+                            alt="..."
+                        />
+                    </div>
+                    <div class="carousel-item">
+                        <img
+                            src="assets/img/ad.png"
+                            class="d-block w-100"
+                            alt="..."
+                        />
+                    </div>
+                </div>
+                <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="prev"
                 >
-                    <div class="carousel-inner">
-                        <div
-                            class="carousel-item active"
-                            data-bs-interval="10000"
-                        >
-                            <img
-                                src="assets/img/ab.jpg"
-                                class="d-block w-100"
-                                alt="..."
-                            />
-                        </div>
-                        <div class="carousel-item" data-bs-interval="2000">
-                            <img
-                                src="assets/img/ab.jpg"
-                                class="d-block w-100"
-                                alt="..."
-                            />
-                        </div>
-                        <div class="carousel-item">
-                            <img
-                                src="assets/img/ab.jpg"
-                                class="d-block w-100"
-                                alt="..."
-                            />
+                    <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="next"
+                >
+                    <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <section class="dashboard">
+                <div class="row">
+                    <!-- Project Request Card -->
+                    <div class="col">
+                        <div class="card info-card sales-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Project Requests</h5>
+
+                                <div class="d-flex align-items-center">
+                                    <div
+                                        class="card-icon rounded-circle d-flex align-items-center justify-content-center"
+                                    >
+                                        <i class="bi bi-activity"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6>15</h6>
+                                        <span
+                                            class="text-success small pt-1 fw-bold"
+                                        >
+                                            0
+                                        </span>
+                                        <span
+                                            class="text-muted small pt-2 ps-1"
+                                        >
+                                            Today</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <button
-                        class="carousel-control-prev"
-                        type="button"
-                        data-bs-target="#carouselExampleInterval"
-                        data-bs-slide="prev"
-                    >
-                        <span
-                            class="carousel-control-prev-icon"
-                            aria-hidden="true"
-                        ></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button
-                        class="carousel-control-next"
-                        type="button"
-                        data-bs-target="#carouselExampleInterval"
-                        data-bs-slide="next"
-                    >
-                        <span
-                            class="carousel-control-next-icon"
-                            aria-hidden="true"
-                        ></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </section>
 
-            <!-- Line Chart -->
-            <section class="section mt-3">
+                    <!-- End Project Request Card -->
+
+                    <!-- Project Card -->
+                    <div class="col">
+                        <div class="card info-card revenue-card">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    Total Projects
+                                    <span>| This Year</span>
+                                </h5>
+
+                                <div class="d-flex align-items-center">
+                                    <div
+                                        class="card-icon rounded-circle d-flex align-items-center justify-content-center"
+                                    >
+                                        <i class="bi bi-columns-gap"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6>10</h6>
+                                        <span
+                                            class="text-success small pt-1 fw-bold"
+                                            >8</span
+                                        >
+                                        <span
+                                            class="text-muted small pt-2 ps-1"
+                                        >
+                                            Completed
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Line Chart -->
+
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="card">
@@ -744,7 +806,7 @@
                     datasets: [
                         {
                             label: "Project 01",
-                            data: [20, 60, 20],
+                            data: [20, 60, 10],
                             backgroundColor: "rgba(255, 99, 132, 0.2)",
                             borderColor: "rgba(255, 99, 132, 1)",
                             borderWidth: 1,
@@ -758,7 +820,7 @@
                         },
                         {
                             label: "Project 02",
-                            data: [40, 20, 40],
+                            data: [40, 20, 20],
                             backgroundColor: "rgba(255, 205, 86, 0.2)",
                             borderColor: "rgba(255, 205, 86, 1)",
                             borderWidth: 1,
