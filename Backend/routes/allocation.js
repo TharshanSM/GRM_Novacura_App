@@ -65,6 +65,7 @@ router.get("/get", async (req, res) => {
     }
 });
 
-//Get All The Allocations Details by Name
+//Create Allocations
+
 
 module.exports = router;
