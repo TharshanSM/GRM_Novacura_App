@@ -486,119 +486,136 @@
             </div> -->
 
             <!-- Add Allocation Form -->
-            <div>
-                <a
-                    class="btn btn-primary"
-                    data-bs-toggle="collapse"
-                    href="#collapseExample"
-                    role="button"
-                    aria-expanded="false"
-                    aria-controls="collapseExample"
-                >
-                    <i class="bi bi-plus-circle"></i> Allocate
-                </a>
-                <div class="collapse" id="collapseExample">
-                    <div class="card card-body mt-3 pt-3">
-                        <!-- General Form Elements -->
-                        <form>
-                            <div class="row mb-3">
-                                <label
-                                    for="inputText"
-                                    class="col-sm-2 col-form-label"
-                                    >Employee ID</label
-                                >
-                                <div class="col-sm-10">
-                                    <input
-                                        type="number"
-                                        class="form-control"
-                                        name="emp_id"
-                                        id="emp_id"
-                                        required
-                                    />
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <label
-                                    for="inputText"
-                                    class="col-sm-2 col-form-label"
-                                    >Project ID</label
-                                >
-                                <div class="col-sm-10">
-                                    <input
-                                        type="number"
-                                        class="form-control"
-                                        name="project_id"
-                                        id="project_id"
-                                        required
-                                    />
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <label
-                                    for="inputText"
-                                    class="col-sm-2 col-form-label"
-                                    >Role ID</label
-                                >
-                                <div class="col-sm-10">
-                                    <input
-                                        type="number"
-                                        class="form-control"
-                                        name="role_id"
-                                        id="role_id"
-                                        required
-                                    />
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <label
-                                    for="inputText"
-                                    class="col-sm-2 col-form-label"
-                                    >Week ID</label
-                                >
-                                <div class="col-sm-10">
-                                    <input
-                                        type="number"
-                                        class="form-control"
-                                        name="week_id"
-                                        id="week_id"
-                                        required
-                                    />
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <label
-                                    for="inputText"
-                                    class="col-sm-2 col-form-label"
-                                    >Allocation</label
-                                >
-                                <div class="col-sm-10">
-                                    <input
-                                        type="number"
-                                        class="form-control"
-                                        name="allocation"
-                                        id="allocation"
-                                        required
-                                    />
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <span class="col-sm-2 col-form-label"> </span>
-                                <div class="col-sm-10">
-                                    <button
-                                        type="submit"
-                                        class="btn btn-primary"
-                                        id="submitbutton"
+            <div class="row">
+                <div class="col">
+                    <a
+                        class="btn btn-primary"
+                        data-bs-toggle="collapse"
+                        href="#collapseExample"
+                        role="button"
+                        aria-expanded="false"
+                        aria-controls="collapseExample"
+                    >
+                        <i class="bi bi-plus-circle"></i> Allocate
+                    </a>
+                    <div class="collapse" id="collapseExample">
+                        <div class="card card-body mt-3 pt-3">
+                            <!-- General Form Elements -->
+                            <form>
+                                <div class="row mb-3">
+                                    <label
+                                        for="inputText"
+                                        class="col-sm-2 col-form-label"
+                                        >Employee ID</label
                                     >
-                                        Submit
-                                    </button>
+                                    <div class="col-sm-10">
+                                        <input
+                                            type="number"
+                                            class="form-control"
+                                            name="emp_id"
+                                            id="emp_id"
+                                            required
+                                        />
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
-                        <!-- End General Form Elements -->
+                                <div class="row mb-3">
+                                    <label
+                                        for="inputText"
+                                        class="col-sm-2 col-form-label"
+                                        >Project ID</label
+                                    >
+                                    <div class="col-sm-10">
+                                        <input
+                                            type="number"
+                                            class="form-control"
+                                            name="project_id"
+                                            id="project_id"
+                                            required
+                                        />
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label
+                                        for="inputText"
+                                        class="col-sm-2 col-form-label"
+                                        >Role ID</label
+                                    >
+                                    <div class="col-sm-10">
+                                        <input
+                                            type="number"
+                                            class="form-control"
+                                            name="role_id"
+                                            id="role_id"
+                                            required
+                                        />
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label
+                                        for="inputText"
+                                        class="col-sm-2 col-form-label"
+                                        >Week ID</label
+                                    >
+                                    <div class="col-sm-10">
+                                        <input
+                                            type="number"
+                                            class="form-control"
+                                            name="week_id"
+                                            id="week_id"
+                                            required
+                                        />
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label
+                                        for="inputText"
+                                        class="col-sm-2 col-form-label"
+                                        >Allocation</label
+                                    >
+                                    <div class="col-sm-10">
+                                        <input
+                                            type="number"
+                                            class="form-control"
+                                            name="allocation"
+                                            id="allocation"
+                                            required
+                                        />
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <span class="col-sm-2 col-form-label">
+                                    </span>
+                                    <div class="col-sm-10">
+                                        <button
+                                            type="submit"
+                                            class="btn btn-primary"
+                                            id="submitbutton"
+                                        >
+                                            Submit
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- End General Form Elements -->
+                        </div>
                     </div>
                 </div>
+                <div class="col-auto">
+                    <form class="form-inline d-flex">
+                        <input
+                            class="form-control"
+                            type="search"
+                            placeholder="Employee Name"
+                            aria-label="Search"
+                        />
+                        <button class="btn btn-outline-success" type="submit">
+                            Search
+                        </button>
+                    </form>
+                </div>
             </div>
+
             <hr />
 
             <!-- Table Container -->
