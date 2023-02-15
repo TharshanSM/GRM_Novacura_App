@@ -37,7 +37,6 @@ employees.forEach((emp) => {
     fetch("http://localhost:3000/allocations/get/")
         .then((response) => response.json())
         .then((data) => {
-            let tableBody = document.getElementById(`${emp.id}`);
             let i = data.recordsets[0];
             i.forEach((element) => {
                 let row = $("<tr>");
