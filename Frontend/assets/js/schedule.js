@@ -78,3 +78,64 @@ function addSchedule(event) {
 
     location.href = "http://127.0.0.1:5500/Frontend/pages-schedule.html";
 }
+
+var options = {
+    series: [
+        {
+            name: "Allocations",
+            data: [80, 60, 60, 60, 80, 40],
+        },
+    ],
+    chart: {
+        type: "bar",
+        height: 350,
+        stacked: true,
+        toolbar: {
+            show: true,
+        },
+        zoom: {
+            enabled: true,
+        },
+    },
+    responsive: [
+        {
+            breakpoint: 480,
+            options: {
+                legend: {
+                    position: "bottom",
+                    offsetX: -10,
+                    offsetY: 0,
+                },
+            },
+        },
+    ],
+    plotOptions: {
+        bar: {
+            horizontal: false,
+            borderRadius: 10,
+            dataLabels: {
+                total: {
+                    enabled: false,
+                    style: {
+                        fontSize: "13px",
+                        fontWeight: 900,
+                    },
+                },
+            },
+        },
+    },
+    xaxis: {
+        type: "Week",
+        categories: ["Week 01", "Week 02", "Week 03", "Week 04", "Week 05"],
+    },
+    legend: {
+        position: "right",
+        offsetY: 40,
+    },
+    fill: {
+        opacity: 1,
+    },
+};
+
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+chart.render();
