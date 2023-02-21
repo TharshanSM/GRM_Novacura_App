@@ -37,7 +37,6 @@ employees.forEach((emp) => {
     fetch("http://localhost:3000/allocations/get/")
         .then((response) => response.json())
         .then((data) => {
-            let tableBody = document.getElementById(`${emp.id}`);
             let i = data.recordsets[0];
             i.forEach((element) => {
                 let row = $("<tr>");
@@ -79,3 +78,69 @@ function addSchedule(event) {
 
     location.href = "http://127.0.0.1:5500/Frontend/pages-schedule.html";
 }
+
+var options = {
+    series: [
+        {
+            name: "Allocations",
+            data: [80, 60, 60, 60, 80, 40],
+        },
+    ],
+    chart: {
+        type: "bar",
+        height: 350,
+        stacked: true,
+        toolbar: {
+            show: true,
+        },
+        zoom: {
+            enabled: true,
+        },
+    },
+    responsive: [
+        {
+            breakpoint: 480,
+            options: {
+                legend: {
+                    position: "bottom",
+                    offsetX: -10,
+                    offsetY: 0,
+                },
+            },
+        },
+    ],
+    plotOptions: {
+        bar: {
+            horizontal: false,
+            borderRadius: 10,
+            dataLabels: {
+                total: {
+                    enabled: false,
+                    style: {
+                        fontSize: "10px",
+                        fontWeight: 900,
+                    },
+                },
+            },
+        },
+    },
+    xaxis: {
+        type: "Week",
+        categories: ["Week 01", "Week 02", "Week 03", "Week 04", "Week 05"],
+    },
+    legend: {
+        position: "right",
+        offsetY: 40,
+    },
+    fill: {
+        opacity: 1,
+        colors: ["#0B5FD7"],
+    },
+    yaxis: {
+        show: false,
+        max: 80,
+    },
+};
+
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+chart.render();
