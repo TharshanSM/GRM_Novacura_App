@@ -117,7 +117,7 @@ var options = {
                 total: {
                     enabled: false,
                     style: {
-                        fontSize: "13px",
+                        fontSize: "10px",
                         fontWeight: 900,
                     },
                 },
@@ -134,6 +134,11 @@ var options = {
     },
     fill: {
         opacity: 1,
+        colors: ["#0B5FD7"],
+    },
+    yaxis: {
+        show: false,
+        max: 80,
     },
 };
 
