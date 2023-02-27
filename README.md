@@ -1,3 +1,5 @@
 # Global Resource Management App
 
-Global Resource Management (GRM) Application is a new tool for managing resource allocation in Novacura.
+Global resource management application is a web based application that can be used by internal purposes
+
+Website Link -> [GRM App](https://lustrous-croquembouche-1116b9.netlify.app/index.html)
