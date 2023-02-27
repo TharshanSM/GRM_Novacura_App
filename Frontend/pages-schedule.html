@@ -478,8 +478,19 @@
                     >
                         <i class="bi bi-plus-circle"></i> Allocate
                     </a>
+                    <a
+                        class="btn btn-primary"
+                        data-bs-toggle="collapse"
+                        href="#collapseExample1"
+                        role="button"
+                        aria-expanded="false"
+                        aria-controls="collapseExample"
+                    >
+                        <i class="bi bi-view-stacked"></i> Overview Schedule
+                    </a>
+
                     <div class="collapse" id="collapseExample">
-                        <div class="card card-body mt-3 pt-3 col-6">
+                        <div class="card card-body mt-3 pt-3">
                             <form onsubmit="addSchedule(event)">
                                 <div class="row mb-3">
                                     <label
@@ -578,534 +589,823 @@
                             </form>
                         </div>
                     </div>
+
+                    <!-- Overview Schedule  -->
+                    <div class="collapse" id="collapseExample1">
+                        <!-- Employee Data 01 -->
+
+                        <div class="card card-body mt-3 pt-3 col">
+                            <h5 class="card-title">
+                                John Smith -
+                                <span class="text-info"> January Month</span>
+                            </h5>
+                            <table class="table caption-top">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Projects</th>
+                                        <th scope="col">W - 01</th>
+                                        <th scope="col">W - 02</th>
+                                        <th scope="col">W - 03</th>
+                                        <th scope="col">W - 04</th>
+                                        <th scope="col">W - 05</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Singer Srilanka</th>
+                                        <td>40</td>
+                                        <td>40</td>
+                                        <td>40</td>
+                                        <td>60</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Woerly</th>
+                                        <td>40</td>
+                                        <td>40</td>
+                                        <td>40</td>
+                                        <td>60</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">VBG</th>
+                                        <td>40</td>
+                                        <td>40</td>
+                                        <td>40</td>
+                                        <td>60</td>
+                                        <td>20</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row" class="text-muted">
+                                            Total Allocations
+                                        </th>
+                                        <td>
+                                            <span class="badge bg-success"
+                                                >80</span
+                                            >
+                                        </td>
+                                        <td>
+                                            <span class="badge bg-success"
+                                                >80</span
+                                            >
+                                        </td>
+                                        <td>
+                                            <span class="badge bg-success"
+                                                >80</span
+                                            >
+                                        </td>
+                                        <td>
+                                            <span class="badge bg-success"
+                                                >80</span
+                                            >
+                                        </td>
+                                        <td>
+                                            <span class="badge bg-success"
+                                                >80</span
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="text-muted">
+                                            Availble Allocations
+                                        </th>
+                                        <td>
+                                            <span
+                                                class="badge bg-warning text-dark"
+                                                >20</span
+                                            >
+                                        </td>
+                                        <td>
+                                            <span
+                                                class="badge bg-warning text-dark"
+                                                >20</span
+                                            >
+                                        </td>
+                                        <td>
+                                            <span
+                                                class="badge bg-warning text-dark"
+                                                >20</span
+                                            >
+                                        </td>
+                                        <td>
+                                            <span
+                                                class="badge bg-warning text-dark"
+                                                >20</span
+                                            >
+                                        </td>
+                                        <td>
+                                            <span
+                                                class="badge bg-warning text-dark"
+                                                >20</span
+                                            >
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Employee Data 02 -->
+                        <div class="card card-body mt-3 pt-3">
+                            <h5 class="card-title">
+                                John Smith -
+                                <span class="text-info"> January Month</span>
+                            </h5>
+                            <table class="table caption-top">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Projects</th>
+                                        <th scope="col">W - 01</th>
+                                        <th scope="col">W - 02</th>
+                                        <th scope="col">W - 03</th>
+                                        <th scope="col">W - 04</th>
+                                        <th scope="col">W - 05</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Singer Srilanka</th>
+                                        <td>40</td>
+                                        <td>40</td>
+                                        <td>40</td>
+                                        <td>60</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Woerly</th>
+                                        <td>40</td>
+                                        <td>40</td>
+                                        <td>40</td>
+                                        <td>60</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">VBG</th>
+                                        <td>40</td>
+                                        <td>40</td>
+                                        <td>40</td>
+                                        <td>60</td>
+                                        <td>20</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row" class="text-muted">
+                                            Total Allocations
+                                        </th>
+                                        <td>
+                                            <span class="badge bg-success"
+                                                >80</span
+                                            >
+                                        </td>
+                                        <td>
+                                            <span class="badge bg-success"
+                                                >80</span
+                                            >
+                                        </td>
+                                        <td>
+                                            <span class="badge bg-success"
+                                                >80</span
+                                            >
+                                        </td>
+                                        <td>
+                                            <span class="badge bg-success"
+                                                >80</span
+                                            >
+                                        </td>
+                                        <td>
+                                            <span class="badge bg-success"
+                                                >80</span
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="text-muted">
+                                            Availble Allocations
+                                        </th>
+                                        <td>
+                                            <span
+                                                class="badge bg-warning text-dark"
+                                                >20</span
+                                            >
+                                        </td>
+                                        <td>
+                                            <span
+                                                class="badge bg-warning text-dark"
+                                                >20</span
+                                            >
+                                        </td>
+                                        <td>
+                                            <span
+                                                class="badge bg-warning text-dark"
+                                                >20</span
+                                            >
+                                        </td>
+                                        <td>
+                                            <span
+                                                class="badge bg-warning text-dark"
+                                                >20</span
+                                            >
+                                        </td>
+                                        <td>
+                                            <span
+                                                class="badge bg-warning text-dark"
+                                                >20</span
+                                            >
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Employee Data 02 -->
+                        <div class="card card-body mt-3 pt-3">
+                            <h5 class="card-title">
+                                John Smith -
+                                <span class="text-info"> January Month</span>
+                            </h5>
+                            <table class="table caption-top">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Projects</th>
+                                        <th scope="col">W - 01</th>
+                                        <th scope="col">W - 02</th>
+                                        <th scope="col">W - 03</th>
+                                        <th scope="col">W - 04</th>
+                                        <th scope="col">W - 05</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Singer Srilanka</th>
+                                        <td>40</td>
+                                        <td>40</td>
+                                        <td>40</td>
+                                        <td>60</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Woerly</th>
+                                        <td>40</td>
+                                        <td>40</td>
+                                        <td>40</td>
+                                        <td>60</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">VBG</th>
+                                        <td>40</td>
+                                        <td>40</td>
+                                        <td>40</td>
+                                        <td>60</td>
+                                        <td>20</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row" class="text-muted">
+                                            Total Allocations
+                                        </th>
+                                        <td>
+                                            <span class="badge bg-success"
+                                                >80</span
+                                            >
+                                        </td>
+                                        <td>
+                                            <span class="badge bg-success"
+                                                >80</span
+                                            >
+                                        </td>
+                                        <td>
+                                            <span class="badge bg-success"
+                                                >80</span
+                                            >
+                                        </td>
+                                        <td>
+                                            <span class="badge bg-success"
+                                                >80</span
+                                            >
+                                        </td>
+                                        <td>
+                                            <span class="badge bg-success"
+                                                >80</span
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="text-muted">
+                                            Availble Allocations
+                                        </th>
+                                        <td>
+                                            <span
+                                                class="badge bg-warning text-dark"
+                                                >20</span
+                                            >
+                                        </td>
+                                        <td>
+                                            <span
+                                                class="badge bg-warning text-dark"
+                                                >20</span
+                                            >
+                                        </td>
+                                        <td>
+                                            <span
+                                                class="badge bg-warning text-dark"
+                                                >20</span
+                                            >
+                                        </td>
+                                        <td>
+                                            <span
+                                                class="badge bg-warning text-dark"
+                                                >20</span
+                                            >
+                                        </td>
+                                        <td>
+                                            <span
+                                                class="badge bg-warning text-dark"
+                                                >20</span
+                                            >
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <hr />
-
-            <!-- <div id="container" class="row mt-3"></div> -->
-
             <section>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="card mb-4">
-                                <div class="card-body text-center mt-4">
-                                    <img
-                                        src="assets/img/profile-img.jpg "
-                                        alt="avatar"
-                                        class="rounded-circle img-fluid"
-                                        style="width: 150px"
-                                    />
-                                    <h5 class="my-3">John Smith</h5>
-                                    <p class="text-muted mb-1">
-                                        Solution Consultant
-                                    </p>
-                                    <p class="text-muted mb-4">
-                                        Novacura Lanka (Pvt) Ltd
-                                    </p>
-                                    <div
-                                        class="d-flex justify-content-center mb-2"
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card mb-4">
+                            <div class="card-body text-center mt-4">
+                                <img
+                                    src="assets/img/profile-img.jpg "
+                                    alt="avatar"
+                                    class="rounded-circle img-fluid"
+                                    style="width: 150px"
+                                />
+                                <h5 class="my-3">John Smith</h5>
+                                <p class="text-muted mb-1">
+                                    Solution Consultant
+                                </p>
+                                <p class="text-muted mb-4">
+                                    Novacura Lanka (Pvt) Ltd
+                                </p>
+                                <div class="d-flex justify-content-center mb-2">
+                                    <button
+                                        type="button"
+                                        class="btn btn-primary"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal"
                                     >
-                                        <button
-                                            type="button"
-                                            class="btn btn-primary"
-                                            data-bs-toggle="modal"
-                                            data-bs-target="#exampleModal"
-                                        >
-                                            Overview Allocation
-                                        </button>
+                                        Overview Allocation
+                                    </button>
 
-                                        <!-- Modal -->
+                                    <!-- Modal -->
+                                    <div
+                                        class="modal fade"
+                                        id="exampleModal"
+                                        tabindex="-1"
+                                        aria-labelledby="exampleModalLabel"
+                                        aria-hidden="true"
+                                    >
                                         <div
-                                            class="modal fade"
-                                            id="exampleModal"
-                                            tabindex="-1"
-                                            aria-labelledby="exampleModalLabel"
-                                            aria-hidden="true"
+                                            class="modal-dialog modal-dialog-centered modal-fullscreen-lg-down modal-xl"
                                         >
-                                            <div
-                                                class="modal-dialog modal-dialog-centered modal-fullscreen-lg-down modal-xl"
-                                            >
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h1
-                                                            class="modal-title fs-5 justify-content-end"
-                                                            id="exampleModalLabel"
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1
+                                                        class="modal-title fs-5 justify-content-end"
+                                                        id="exampleModalLabel"
+                                                    >
+                                                        John Smith -
+                                                        <span class="text-info">
+                                                            January Month</span
                                                         >
-                                                            John Smith -
-                                                            <span
-                                                                class="text-info"
-                                                            >
-                                                                January
-                                                                Month</span
-                                                            >
-                                                        </h1>
-                                                        <button
-                                                            type="button"
-                                                            class="btn-close"
-                                                            data-bs-dismiss="modal"
-                                                            aria-label="Close"
-                                                        ></button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <table
-                                                            class="table caption-top"
-                                                        >
-                                                            <thead>
-                                                                <tr>
-                                                                    <th
-                                                                        scope="col"
-                                                                    >
-                                                                        Projects
-                                                                    </th>
-                                                                    <th
-                                                                        scope="col"
-                                                                    >
-                                                                        Week 01
-                                                                        - Jan 02
-                                                                    </th>
-                                                                    <th
-                                                                        scope="col"
-                                                                    >
-                                                                        Week 02
-                                                                        - Jan 09
-                                                                    </th>
-                                                                    <th
-                                                                        scope="col"
-                                                                    >
-                                                                        Week 03
-                                                                        - Jan 16
-                                                                    </th>
-                                                                    <th
-                                                                        scope="col"
-                                                                    >
-                                                                        Week 03
-                                                                        - Jan 23
-                                                                    </th>
-                                                                    <th
-                                                                        scope="col"
-                                                                    >
-                                                                        Week 03
-                                                                        - Jan 30
-                                                                    </th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <th
-                                                                        scope="row"
-                                                                    >
-                                                                        Singer
-                                                                        Srilanka
-                                                                    </th>
-                                                                    <td>40</td>
-                                                                    <td>40</td>
-                                                                    <td>40</td>
-                                                                    <td>60</td>
-                                                                    <td>20</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th
-                                                                        scope="row"
-                                                                    >
-                                                                        Woerly
-                                                                    </th>
-                                                                    <td>40</td>
-                                                                    <td>40</td>
-                                                                    <td>40</td>
-                                                                    <td>60</td>
-                                                                    <td>20</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th
-                                                                        scope="row"
-                                                                    >
-                                                                        VBG
-                                                                    </th>
-                                                                    <td>40</td>
-                                                                    <td>40</td>
-                                                                    <td>40</td>
-                                                                    <td>60</td>
-                                                                    <td>20</td>
-                                                                </tr>
+                                                    </h1>
+                                                    <button
+                                                        type="button"
+                                                        class="btn-close"
+                                                        data-bs-dismiss="modal"
+                                                        aria-label="Close"
+                                                    ></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <table
+                                                        class="table caption-top"
+                                                    >
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">
+                                                                    Projects
+                                                                </th>
+                                                                <th scope="col">
+                                                                    Week 01 -
+                                                                    Jan 02
+                                                                </th>
+                                                                <th scope="col">
+                                                                    Week 02 -
+                                                                    Jan 09
+                                                                </th>
+                                                                <th scope="col">
+                                                                    Week 03 -
+                                                                    Jan 16
+                                                                </th>
+                                                                <th scope="col">
+                                                                    Week 03 -
+                                                                    Jan 23
+                                                                </th>
+                                                                <th scope="col">
+                                                                    Week 03 -
+                                                                    Jan 30
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">
+                                                                    Singer
+                                                                    Srilanka
+                                                                </th>
+                                                                <td>40</td>
+                                                                <td>40</td>
+                                                                <td>40</td>
+                                                                <td>60</td>
+                                                                <td>20</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">
+                                                                    Woerly
+                                                                </th>
+                                                                <td>40</td>
+                                                                <td>40</td>
+                                                                <td>40</td>
+                                                                <td>60</td>
+                                                                <td>20</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">
+                                                                    VBG
+                                                                </th>
+                                                                <td>40</td>
+                                                                <td>40</td>
+                                                                <td>40</td>
+                                                                <td>60</td>
+                                                                <td>20</td>
+                                                            </tr>
 
-                                                                <tr>
-                                                                    <th
-                                                                        scope="row"
-                                                                        class="text-muted"
+                                                            <tr>
+                                                                <th
+                                                                    scope="row"
+                                                                    class="text-muted"
+                                                                >
+                                                                    Total
+                                                                    Allocations
+                                                                </th>
+                                                                <td>
+                                                                    <span
+                                                                        class="badge bg-success"
+                                                                        >80</span
                                                                     >
-                                                                        Total
-                                                                        Allocations
-                                                                    </th>
-                                                                    <td>
-                                                                        <span
-                                                                            class="badge bg-success"
-                                                                            >80</span
-                                                                        >
-                                                                    </td>
-                                                                    <td>
-                                                                        <span
-                                                                            class="badge bg-success"
-                                                                            >80</span
-                                                                        >
-                                                                    </td>
-                                                                    <td>
-                                                                        <span
-                                                                            class="badge bg-success"
-                                                                            >80</span
-                                                                        >
-                                                                    </td>
-                                                                    <td>
-                                                                        <span
-                                                                            class="badge bg-success"
-                                                                            >80</span
-                                                                        >
-                                                                    </td>
-                                                                    <td>
-                                                                        <span
-                                                                            class="badge bg-success"
-                                                                            >80</span
-                                                                        >
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th
-                                                                        scope="row"
-                                                                        class="text-muted"
+                                                                </td>
+                                                                <td>
+                                                                    <span
+                                                                        class="badge bg-success"
+                                                                        >80</span
                                                                     >
-                                                                        Availble
-                                                                        Allocations
-                                                                    </th>
-                                                                    <td>
-                                                                        <span
-                                                                            class="badge bg-warning text-dark"
-                                                                            >20</span
-                                                                        >
-                                                                    </td>
-                                                                    <td>
-                                                                        <span
-                                                                            class="badge bg-warning text-dark"
-                                                                            >20</span
-                                                                        >
-                                                                    </td>
-                                                                    <td>
-                                                                        <span
-                                                                            class="badge bg-warning text-dark"
-                                                                            >20</span
-                                                                        >
-                                                                    </td>
-                                                                    <td>
-                                                                        <span
-                                                                            class="badge bg-warning text-dark"
-                                                                            >20</span
-                                                                        >
-                                                                    </td>
-                                                                    <td>
-                                                                        <span
-                                                                            class="badge bg-warning text-dark"
-                                                                            >20</span
-                                                                        >
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button
-                                                            type="button"
-                                                            class="btn btn-danger"
-                                                            data-bs-dismiss="modal"
-                                                        >
-                                                            Close
-                                                        </button>
-                                                        <!-- <button
+                                                                </td>
+                                                                <td>
+                                                                    <span
+                                                                        class="badge bg-success"
+                                                                        >80</span
+                                                                    >
+                                                                </td>
+                                                                <td>
+                                                                    <span
+                                                                        class="badge bg-success"
+                                                                        >80</span
+                                                                    >
+                                                                </td>
+                                                                <td>
+                                                                    <span
+                                                                        class="badge bg-success"
+                                                                        >80</span
+                                                                    >
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th
+                                                                    scope="row"
+                                                                    class="text-muted"
+                                                                >
+                                                                    Availble
+                                                                    Allocations
+                                                                </th>
+                                                                <td>
+                                                                    <span
+                                                                        class="badge bg-warning text-dark"
+                                                                        >20</span
+                                                                    >
+                                                                </td>
+                                                                <td>
+                                                                    <span
+                                                                        class="badge bg-warning text-dark"
+                                                                        >20</span
+                                                                    >
+                                                                </td>
+                                                                <td>
+                                                                    <span
+                                                                        class="badge bg-warning text-dark"
+                                                                        >20</span
+                                                                    >
+                                                                </td>
+                                                                <td>
+                                                                    <span
+                                                                        class="badge bg-warning text-dark"
+                                                                        >20</span
+                                                                    >
+                                                                </td>
+                                                                <td>
+                                                                    <span
+                                                                        class="badge bg-warning text-dark"
+                                                                        >20</span
+                                                                    >
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button
+                                                        type="button"
+                                                        class="btn btn-danger"
+                                                        data-bs-dismiss="modal"
+                                                    >
+                                                        Close
+                                                    </button>
+                                                    <!-- <button
                                                             type="button"
                                                             class="btn btn-primary"
                                                         >
                                                             Save changes
                                                         </button> -->
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- End Modal -->
-
-                                        <button
-                                            type="button"
-                                            class="btn btn-outline-primary ms-1"
-                                        >
-                                            More Details
-                                        </button>
                                     </div>
+                                    <!-- End Modal -->
+
+                                    <button
+                                        type="button"
+                                        class="btn btn-outline-primary ms-1"
+                                    >
+                                        More Details
+                                    </button>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="card mb-4">
-                                <div class="card-body">
-                                    <div class="row mt-4">
-                                        <div class="col-sm-3">
-                                            <p class="mb-0">CM-Group</p>
-                                        </div>
-                                        <div class="col-sm-9">
-                                            <p class="text-muted mb-0">
-                                                Sri Lanka
-                                            </p>
-                                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="row mt-4">
+                                    <div class="col-sm-3">
+                                        <p class="mb-0">CM-Group</p>
                                     </div>
-                                    <hr />
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <p class="mb-0">CM-Group</p>
-                                        </div>
-                                        <div class="col-sm-9">
-                                            <p class="text-muted mb-0">
-                                                Sweden West/South
-                                            </p>
-                                        </div>
+                                    <div class="col-sm-9">
+                                        <p class="text-muted mb-0">Sri Lanka</p>
                                     </div>
-                                    <hr />
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <p class="mb-0">Customers</p>
-                                        </div>
-                                        <div class="col-sm-9">
-                                            <p class="text-muted mb-0">
-                                                Singer Sri Lanka
-                                            </p>
-                                            <p class="text-muted mb-0">
-                                                Woerly
-                                            </p>
-                                            <p class="text-muted mb-0">VBG</p>
-                                            <p class="text-muted mb-0">
-                                                Specama
-                                            </p>
-                                        </div>
+                                </div>
+                                <hr />
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <p class="mb-0">CM-Group</p>
                                     </div>
-                                    <hr />
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <p class="mb-0">Roles</p>
-                                        </div>
-                                        <div class="col-sm-9">
-                                            <p class="text-muted mb-0">
-                                                IFS Developer
-                                            </p>
-                                            <p class="text-muted mb-0">
-                                                Flow Developer
-                                            </p>
-                                        </div>
+                                    <div class="col-sm-9">
+                                        <p class="text-muted mb-0">
+                                            Sweden West/South
+                                        </p>
                                     </div>
-                                    <hr />
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <p class="mb-0">Comments</p>
-                                        </div>
-                                        <div class="col-sm-9">
-                                            <p class="text-muted mb-0">N/A</p>
-                                        </div>
+                                </div>
+                                <hr />
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <p class="mb-0">Customers</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p class="text-muted mb-0">
+                                            Singer Sri Lanka
+                                        </p>
+                                        <p class="text-muted mb-0">Woerly</p>
+                                        <p class="text-muted mb-0">VBG</p>
+                                        <p class="text-muted mb-0">Specama</p>
+                                    </div>
+                                </div>
+                                <hr />
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <p class="mb-0">Roles</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p class="text-muted mb-0">
+                                            IFS Developer
+                                        </p>
+                                        <p class="text-muted mb-0">
+                                            Flow Developer
+                                        </p>
+                                    </div>
+                                </div>
+                                <hr />
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <p class="mb-0">Comments</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p class="text-muted mb-0">N/A</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="card mb-4 mb-md-0">
-                                <div class="row">
-                                    <div class="col card-title text-center">
-                                        Weekly Allocation Status
-                                    </div>
-                                    <div class="col dropdown mt-3">
-                                        <a
-                                            class="btn dropdown-toggle border border-secondary"
-                                            href="#"
-                                            role="button"
-                                            data-bs-toggle="dropdown"
-                                            aria-expanded="false"
-                                        >
-                                            Week 01 - Feb 02 - 80
-                                        </a>
-
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    href="#"
-                                                    >Week 01 - Feb 02 - 80</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    href="#"
-                                                    >Week 02 - Feb 09 - 80</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    href="#"
-                                                    >Week 03 - Feb 16 - 80</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    href="#"
-                                                    >Week 04 - Feb 23 - 80</a
-                                                >
-                                            </li>
-                                        </ul>
-                                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card mb-4 mb-md-0">
+                            <div class="row">
+                                <div class="col card-title text-center">
+                                    Weekly Allocation Status
                                 </div>
-                                <div class="card-body">
-                                    <table
-                                        class="table align-middle mb-0 bg-white"
+                                <div class="col dropdown mt-3">
+                                    <a
+                                        class="btn dropdown-toggle border border-secondary"
+                                        href="#"
+                                        role="button"
+                                        data-bs-toggle="dropdown"
+                                        aria-expanded="false"
                                     >
-                                        <thead>
-                                            <tr>
-                                                <th>Project</th>
-                                                <th>Allocation</th>
-                                                <th>Progress View</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div
-                                                        class="d-flex align-items-center"
-                                                    >
-                                                        <div class="ms-3">
-                                                            <p
-                                                                class="fw-bold mb-1"
-                                                            >
-                                                                Singer Sri Lanka
-                                                            </p>
-                                                            <p
-                                                                class="text-muted mb-0"
-                                                            >
-                                                                Sri Lanka
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <h4>
-                                                        <span
-                                                            class="badge bg-secondary"
-                                                            >40</span
-                                                        >
-                                                    </h4>
-                                                </td>
-                                                <td>
-                                                    <div class="progress">
-                                                        <div
-                                                            class="progress-bar"
-                                                            role="progressbar"
-                                                            aria-label="Basic example"
-                                                            style="width: 40%"
-                                                            aria-valuenow="40"
-                                                            aria-valuemin="0"
-                                                            aria-valuemax="100"
-                                                        ></div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div
-                                                        class="d-flex align-items-center"
-                                                    >
-                                                        <div class="ms-3">
-                                                            <p
-                                                                class="fw-bold mb-1"
-                                                            >
-                                                                Woerly
-                                                            </p>
-                                                            <p
-                                                                class="text-muted mb-0"
-                                                            >
-                                                                Sweden
-                                                                West/South
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <h4>
-                                                        <span
-                                                            class="badge bg-secondary"
-                                                            >20</span
-                                                        >
-                                                    </h4>
-                                                </td>
-                                                <td>
-                                                    <div class="progress">
-                                                        <div
-                                                            class="progress-bar"
-                                                            role="progressbar"
-                                                            aria-label="Basic example"
-                                                            style="width: 20%"
-                                                            aria-valuenow="25"
-                                                            aria-valuemin="0"
-                                                            aria-valuemax="100"
-                                                        ></div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div
-                                                        class="d-flex align-items-center"
-                                                    >
-                                                        <div class="ms-3">
-                                                            <p
-                                                                class="fw-bold mb-1"
-                                                            >
-                                                                VBG
-                                                            </p>
-                                                            <p
-                                                                class="text-muted mb-0"
-                                                            >
-                                                                DACH
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <h4>
-                                                        <span
-                                                            class="badge bg-secondary"
-                                                            >20</span
-                                                        >
-                                                    </h4>
-                                                </td>
-                                                <td>
-                                                    <div class="progress">
-                                                        <div
-                                                            class="progress-bar"
-                                                            role="progressbar"
-                                                            aria-label="Basic example"
-                                                            style="width: 20%"
-                                                            aria-valuenow="25"
-                                                            aria-valuemin="0"
-                                                            aria-valuemax="100"
-                                                        ></div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                        Week 01 - Feb 02 - 80
+                                    </a>
+
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item" href="#"
+                                                >Week 01 - Feb 02 - 80</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#"
+                                                >Week 02 - Feb 09 - 80</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#"
+                                                >Week 03 - Feb 16 - 80</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#"
+                                                >Week 04 - Feb 23 - 80</a
+                                            >
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
+                            <div class="card-body">
+                                <table class="table align-middle mb-0 bg-white">
+                                    <thead>
+                                        <tr>
+                                            <th>Project</th>
+                                            <th>Allocation</th>
+                                            <th>Progress View</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div
+                                                    class="d-flex align-items-center"
+                                                >
+                                                    <div class="ms-3">
+                                                        <p class="fw-bold mb-1">
+                                                            Singer Sri Lanka
+                                                        </p>
+                                                        <p
+                                                            class="text-muted mb-0"
+                                                        >
+                                                            Sri Lanka
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <h4>
+                                                    <span
+                                                        class="badge bg-secondary"
+                                                        >40</span
+                                                    >
+                                                </h4>
+                                            </td>
+                                            <td>
+                                                <div class="progress">
+                                                    <div
+                                                        class="progress-bar"
+                                                        role="progressbar"
+                                                        aria-label="Basic example"
+                                                        style="width: 40%"
+                                                        aria-valuenow="40"
+                                                        aria-valuemin="0"
+                                                        aria-valuemax="100"
+                                                    ></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div
+                                                    class="d-flex align-items-center"
+                                                >
+                                                    <div class="ms-3">
+                                                        <p class="fw-bold mb-1">
+                                                            Woerly
+                                                        </p>
+                                                        <p
+                                                            class="text-muted mb-0"
+                                                        >
+                                                            Sweden West/South
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <h4>
+                                                    <span
+                                                        class="badge bg-secondary"
+                                                        >20</span
+                                                    >
+                                                </h4>
+                                            </td>
+                                            <td>
+                                                <div class="progress">
+                                                    <div
+                                                        class="progress-bar"
+                                                        role="progressbar"
+                                                        aria-label="Basic example"
+                                                        style="width: 20%"
+                                                        aria-valuenow="25"
+                                                        aria-valuemin="0"
+                                                        aria-valuemax="100"
+                                                    ></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div
+                                                    class="d-flex align-items-center"
+                                                >
+                                                    <div class="ms-3">
+                                                        <p class="fw-bold mb-1">
+                                                            VBG
+                                                        </p>
+                                                        <p
+                                                            class="text-muted mb-0"
+                                                        >
+                                                            DACH
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <h4>
+                                                    <span
+                                                        class="badge bg-secondary"
+                                                        >20</span
+                                                    >
+                                                </h4>
+                                            </td>
+                                            <td>
+                                                <div class="progress">
+                                                    <div
+                                                        class="progress-bar"
+                                                        role="progressbar"
+                                                        aria-label="Basic example"
+                                                        style="width: 20%"
+                                                        aria-valuenow="25"
+                                                        aria-valuemin="0"
+                                                        aria-valuemax="100"
+                                                    ></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="card mb-4 mb-md-0">
-                                <div class="card-body">
-                                    <div id="chart"></div>
-                                </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 mb-md-0">
+                            <div class="card-body">
+                                <div id="chart"></div>
                             </div>
                         </div>
                     </div>
