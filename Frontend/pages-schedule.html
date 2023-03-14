@@ -69,7 +69,7 @@
     </head>
 
     <body>
-        <!-- ======= Header ======= -->
+        <!--  Header  -->
         <header id="header" class="header fixed-top d-flex align-items-center">
             <div class="d-flex align-items-center justify-content-between">
                 <a href="index.html" class="logo d-flex align-items-center">
@@ -381,7 +381,7 @@
         </header>
         <!-- End Header -->
 
-        <!-- ======= Sidebar ======= -->
+        <!--  Sidebar  -->
         <aside id="sidebar" class="sidebar">
             <ul class="sidebar-nav" id="sidebar-nav">
                 <li class="nav-item">
@@ -465,7 +465,6 @@
                 </nav>
             </div>
 
-            <!-- Add Allocation Form -->
             <div class="row">
                 <div class="col">
                     <a
@@ -499,9 +498,31 @@
                         <i class="bi bi-person-check"></i> Employee Overview
                     </a>
 
+                    <!-- Add Allocation Form -->
                     <div class="collapse" id="collapseExample">
                         <div class="card card-body mt-3 pt-3">
                             <form onsubmit="addSchedule(event)">
+                                <div class="row mb-3">
+                                    <label
+                                        for="inputText"
+                                        class="col-sm-4 col-form-label"
+                                        >Employee Name</label
+                                    >
+                                    <div class="col-sm-8">
+                                        <select
+                                            class="form-select"
+                                            aria-label="Default select example"
+                                        >
+                                            <option selected>
+                                                Open this select menu
+                                            </option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+
                                 <div class="row mb-3">
                                     <label
                                         for="inputText"
@@ -599,6 +620,7 @@
                             </form>
                         </div>
                     </div>
+                    <!-- End Add Allocation Form -->
 
                     <!-- Overview Schedule  -->
                     <div class="collapse" id="collapseExample1">
@@ -1414,7 +1436,7 @@
                 <strong
                     ><span
                         ><a href="https://www.novacura.com/"
-                            >NovaCura AB</a
+                            >Novacura AB</a
                         ></span
                     ></strong
                 >.
