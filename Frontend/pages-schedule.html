@@ -506,7 +506,7 @@
                                     <label
                                         for="inputText"
                                         class="col-sm-4 col-form-label"
-                                        >Employee Name</label
+                                        >Employee(s)</label
                                     >
                                     <div class="col-sm-8">
                                         <select
@@ -629,19 +629,19 @@
                                         >Allocation</label
                                     >
                                     <div class="col-sm-8">
-                                        <select
-                                            class="form-select"
-                                            aria-label="Select Project"
-                                        >
-                                            <option selected disabled>
-                                                Select Allocation
-                                            </option>
-                                            <option value="1">10</option>
-                                            <option value="2">20</option>
-                                            <option value="3">40</option>
-                                            <option value="3">60</option>
-                                            <option value="3">80</option>
-                                        </select>
+                                        <input
+                                            class="form-control"
+                                            list="datalistOptions"
+                                            id="exampleDataList"
+                                            placeholder="Allocation"
+                                        />
+                                        <datalist id="datalistOptions">
+                                            <option value="10"></option>
+                                            <option value="20"></option>
+                                            <option value="40"></option>
+                                            <option value="60"></option>
+                                            <option value="80"></option>
+                                        </datalist>
                                     </div>
                                 </div>
 
